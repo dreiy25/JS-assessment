@@ -1,0 +1,46 @@
+// variable to hold cryptopunks
+const cryptopunks =[]
+
+// Then we created an object for the funcion that takes a value through the parameters
+function punksNFT (name, hairstyle, accessories1, accessories2) {
+    
+// Then we created a properties for our object.
+    const cp ={
+        "Name": name,
+        "Hairstyle": hairstyle,
+        "Accessories1": accessories1,
+        "Accessories2": accessories2
+    }
+
+// it will push the object into the variable cryptopunks.
+    cryptopunks.push(cp);
+    console.log("Cryptopunk: " + name);
+}
+
+// organize the output
+function punkList () {
+
+// we create a loop
+    for(i = 0; i < cryptopunks.length; i++){
+
+        console.log("\nID:\t\t\t\t" + (i + 1));
+        console.log("Name:\t\t\t" + cryptopunks[i].Name);
+        console.log("Hairstyle:\t\t" + cryptopunks[i].Hairstyle);
+        console.log("Accessories 1: \t" + cryptopunks[i].Accessories1);
+        console.log("Accessories 2: \t" + cryptopunks[i].Accessories2);
+    }
+
+}
+
+// This will hold the total length of the array responsible for holding the objects.
+function totalPunks() {
+    console.log("\nTotal Punks: " + cryptopunks.length);
+}
+
+// then we will call the functions that we created.
+punksNFT("Jeremy", "Taper_Fade", "Necklace", "Earrings")
+punksNFT("Ferb", "Low_Fade", "Watch", "Ring")
+punksNFT("Doofenshmirtz", "Mohawks", "Shades", "Earrings")
+punksNFT("Phineas", "Buzz_Cut", "Ring", "Necklaces")
+punkList();
+totalPunks();
